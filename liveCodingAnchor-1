@@ -1,0 +1,63 @@
+/*
+  ////////////
+  Tiket Konser
+  ////////////
+
+  Buatlah suatu algoritma untuk pembelian tiket konser.
+
+  [INSTRUCTIONS]
+    1. Peserta konser akan membeli berdasarkan uang yang dia miliki, dan asumsi
+       akan memilih harga yang paling mahal.
+    2. Apabila peserta konser memiliki uang yang lebih rendah dari tiket konser,
+       maka dia akan pulang ke rumah.
+    3. Harga jenis kursi konser, antara lain:
+      - VVIP 1000000
+      - VIP  700000
+      - Reguler 300000
+    4. Apabila membeli tiket, tampilkan dalam format [nama]-[jenis kursi] dan [kembalian]
+
+  [RULES]
+    1. Hanya tulis Algoritma saja
+*/
+
+// type here
+STORE ticketVVIP with 1000000
+STORE ticketVIP  with 700000
+STORE ticketReguler with 300000
+STORE nama with any value
+STORE uang with random number
+STORE kembalian without value
+
+// =======ALGORITMA========
+1. Go to ticket counter bring 'uang';
+2. Check ticket types;
+3. Compare each ticket type price with 'uang';
+4. If 'uang' more or equal than 'ticketVVIP' then buy 'ticketVVIP';
+5. If 'uang' less than 'ticketVVIP' but more or equal than 'ticketVIP' then buy 'ticketVIP';
+6. If 'uang' less than 'ticketVIP' but more or equal than 'ticketReguler' then buy 'ticketReguler';
+7. If 'uang' less than 'ticketReguler'then go home;
+8. If buy any ticket then do substract 'uang' with ticket price and return value as 'kembalian';
+9. Display 'nama' - ticket type and 'kembalian'
+
+// =======PSEUDOCODE========
+// IF uang more than ticketVVIP 
+// AND uang more than ticketVIP 
+// AND uang more than ticketReguler THEN
+//   DO buy ticketVVIP
+//   SET kembalian to uang minus ticketVVIP
+//   DISPLAY nama "-" ticketVVIP "dan" kembalian
+// ELSE IF uang less than ticketVVIP 
+// AND uang more than ticketVIP 
+// AND uang more than ticketReguler THEN
+//   DO buy ticketVIP
+//   SET kembalian to uang minus ticketVIP
+//   DISPLAY nama "-" ticketVIP "dan" kembalian
+// ELSE IF uang less than ticketVVIP 
+// AND uang less than ticketVIP 
+// AND uang more than ticketReguler THEN
+//   DO buy ticketReguler
+//   SET kembalian to uang minus ticketReguler
+//   DISPLAY nama "-" ticketReguler "dan" kembalian
+// ELSE
+//   DO go home
+// END IF
