@@ -9,10 +9,10 @@ const dataHandling = input => {
 	for( i=0; i < input.length; i++) {
 		for( j=0; j<input[i].length; j++) {
 			switch (j) {
-                case 0: console.log('Nomor ID:  ', input[i][j]); break;
-                case 1: console.log('Nama Lengkap:  ', input[i][j]); break;
-                case 2: console.log('TTL:  ', input[i][j]); break;
-                case 3: console.log('Hobi:  ', input[i][j]); break;
+                case 0: console.log(`Nomor ID:  ${input[i][j]}`); break;
+                case 1: console.log(`Nama Lengkap:  ${input[i][j]}`); break;
+                case 2: console.log(`TTL:  ${input[i][j]} ${input[i][j+1]}`); break;
+                case 3: console.log(`Hobi:  ${input[i][j+1]}`); break;
             }
         }
     }
